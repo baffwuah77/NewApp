@@ -1,0 +1,12 @@
+services:
+  app:
+    image: ghcr.io/baffwuah77/new-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: new-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
